@@ -29,6 +29,18 @@ public class TicTacToe implements ActionListener {
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setText("Tic-Tac-Toe");
         label.setOpaque(true);
+
+        title_panel.setLayout(new BorderLayout());
+        title_panel.setBounds(0, 0, 800, 100);
+
+        button_panel.setLayout(new GridLayout(3, 3));
+        button_panel.setBackground(new Color(207, 185, 151));
+
+        
+
+        title_panel.add(label);
+        frame.add(title_panel, BorderLayout.NORTH);
+        frame.add(button_panel);
     }
 
     @Override
