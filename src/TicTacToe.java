@@ -18,7 +18,7 @@ public class TicTacToe implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 800);
         frame.setTitle("Tic-Tac-Toe");
-        frame.getContentPane().setBackground(Color.WHITE);
+        frame.getContentPane().setBackground(Color.GRAY);
         frame.setLayout(new BorderLayout());
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -34,7 +34,7 @@ public class TicTacToe implements ActionListener {
         title_panel.setBounds(0, 0, 800, 100);
 
         button_panel.setLayout(new GridLayout(3, 3));
-        button_panel.setBackground(new Color(207, 185, 151));
+        button_panel.setBackground(Color.BLACK);
 
         for (int i=0; i<9; i++) {
             buttons[i] = new JButton();
@@ -105,7 +105,7 @@ public class TicTacToe implements ActionListener {
         if ((buttons[6].getText()=="X") && (buttons[7].getText()=="X") && (buttons[8].getText()=="X")) {
             xWins(6,7,8);
         }
-        if ((buttons[0].getText()=="X") && (buttons[3].getText()=="X") && (buttons[4].getText()=="X")) {
+        if ((buttons[0].getText()=="X") && (buttons[3].getText()=="X") && (buttons[6].getText()=="X")) {
             xWins(0,3,6);
         }
         if ((buttons[1].getText()=="X") && (buttons[4].getText()=="X") && (buttons[7].getText()=="X")) {
@@ -130,7 +130,7 @@ public class TicTacToe implements ActionListener {
         if ((buttons[6].getText()=="O") && (buttons[7].getText()=="O") && (buttons[8].getText()=="O")) {
             oWins(6,7,8);
         }
-        if ((buttons[0].getText()=="O") && (buttons[3].getText()=="O") && (buttons[4].getText()=="O")) {
+        if ((buttons[0].getText()=="O") && (buttons[3].getText()=="O") && (buttons[6].getText()=="O")) {
             oWins(0,3,6);
         }
         if ((buttons[1].getText()=="O") && (buttons[4].getText()=="O") && (buttons[7].getText()=="O")) {
